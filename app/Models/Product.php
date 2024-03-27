@@ -15,10 +15,24 @@ class Product extends Model
     {
         return $this->hasMany(ProductReview::class);
     }
+
     public function category(): BelongsTo
     {
         return $this->BelongsTo(ProductCategory::class);
     }
-    
-    
+
+    public function OderItem(): BelongsTo
+    {
+        return $this->BelongsTo(OrderItem::class);
+    }
+
+    public function payment(): BelongsTo
+    {
+        return $this->BelongsTo(Payment::class);
+    }
+
+    public function cart(): BelongsTo
+    {
+        return $this->BelongsTo(Cart::class);
+    }
 }
