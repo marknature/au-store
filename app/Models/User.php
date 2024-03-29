@@ -6,14 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-use App\Models\Address;
-use App\Models\Cart;
-use App\Models\Order;
-use App\Models\OrderItem;
-use App\Models\Product;
-use App\Models\ProductCategory;
-use App\Models\ProductReview;
-use App\Models\Payment;
 
 class User extends Authenticatable
 {
@@ -80,11 +72,6 @@ class User extends Authenticatable
     public function products()
     {
         return $this->hasMany(Product::class);
-    }
-
-    public function productCategories()
-    {
-        return $this->hasManyThrough(ProductCategory::class, Product::class);
     }
 
     public function productReviews()
