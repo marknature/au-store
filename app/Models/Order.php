@@ -12,17 +12,17 @@ class Order extends Model
     public function orderItems(){
         return $this->hasMany(OrderItem::class);
     }
-    public function shippingAddress(){
-        return $this->belongsTo(Address::class, 'shipping_address_id');
-    }
-    public function payments(){
-        return $this->hasMany(Payment::class);
+    /*public function shippingAddress(){
+        return $this->belongsTo(ShippingAddress::class);
+    }*/
+    public function payment(){
+        return $this->hasOne(Payment::class);
     }
     public function product(){
-        return $this->belongsToMany(Product::class);
+        return $this->hasMany(Product::class);
     }
     public function cart(){
-        return $this->belongsTo(Cart::class);
+        return $this->hasOne(Cart::class);
     }
     public function user(){
         return $this->belongsTo(User::class);
