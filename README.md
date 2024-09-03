@@ -1,4 +1,4 @@
-**University Online Store - ReadMe**
+# University Online Store - ReadMe
 
 Welcome to the University Online Store! This project aims to provide a convenient platform for university students to purchase various items related to their academic needs and university spirit. Built using React for the frontend and Laravel for the backend, this online store offers a seamless shopping experience tailored to the university community.
 
